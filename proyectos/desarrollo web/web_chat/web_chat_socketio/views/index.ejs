@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat</title>
+</head>
+<body>
+  <h1>HeartCare Chat</h1>
+
+  <div id="room-container">
+    <% Object.keys(rooms).forEach(room => { %>
+      <div><%= room %></div>
+      <a href="/<%= room %>">Unirse</a>
+      <% if (rooms[room].password) { %>
+        <span>(Privada)</span>
+      <% } %>
+    <% }) %>
+  </div>
+
+  <h2>Crea una nueva sala</h2>
+  <form action="/room" method="POST">
+    <input name="room" type="text" required placeholder="Nombre de la sala">
+    <input name="password" type="password" placeholder="Contraseña (opcional)">
+    <button type="submit">Crear Sala</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<div class="cont">
+	<div class="screen">
+	  <div class="screen__content">
+		<form *ngIf="isLoginView" class="login" (ngSubmit)="onLogin()">
+		  <div class="login__field">
+		
+			<input name="userName" [(ngModel)]="userLogin.userName" type="text" class="login__input" placeholder="Nombre de Usuario">
+			<div *ngIf="loginErrors.userName" class="error">{{ loginErrors.userName }}</div>
+		  </div>
+		  <div class="login__field">
+			<input name="password" [(ngModel)]="userLogin.password" type="password" class="login__input" placeholder="Contraseña">
+			<div *ngIf="loginErrors.password" class="error">{{ loginErrors.password }}</div>
+		  </div>
+		  <button type="submit" class="button login__submit">
+			<span class="button__text">Login</span>
+		  </button>
+			<a class="login__forgot" (click)="isLoginView = false">Registrar</a>
+		</form>
+		<form *ngIf="!isLoginView" class="login" (ngSubmit)="onRegister()">
+		  <div class="login__field">
+			<i class="login__icon fas fa-user"></i>
+			<input name="userName" [(ngModel)]="userRegisterObj.userName" type="text" class="login__input" placeholder="Nombre de usuario">
+			<div *ngIf="registerErrors.userName" class="error">{{ registerErrors.userName }}</div>
+		  </div>
+		  <div class="login__field">
+			<i class="login__icon fas fa-envelope"></i>
+			<input name="emailId" [(ngModel)]="userRegisterObj.emailId" type="email" class="login__input" placeholder="Email">
+			<div *ngIf="registerErrors.emailId" class="error">{{ registerErrors.emailId }}</div>
+		  </div>
+		  <div class="login__field">
+			<input name="password" [(ngModel)]="userRegisterObj.password" type="password" class="login__input" placeholder="Contraseña">
+			<div *ngIf="registerErrors.password" class="error">{{ registerErrors.password }}</div>
+		  </div>
+		  <button type="submit" class="button login__submit">
+			<span class="button__text">Registrar</span>
+		  </button>
+		  <a class="login__forgot" (click)="isLoginView = true">Ingresa</a>
+		  <!-- <a class="login__forgot" (click)="isLoginView = true">Enviar correo de recuperación</a> -->
+		</form>
+	  </div>  
+	</div>
+  </div>
+  

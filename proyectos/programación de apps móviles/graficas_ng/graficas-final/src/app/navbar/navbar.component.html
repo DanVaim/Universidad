@@ -1,0 +1,14 @@
+<div class="navbar">
+  <ul class="navbar-nav">
+    <li class="navbar-nav-item" *ngFor="let data of navData">
+      <a class="navbar-nav-link" [routerLink]="[data.routerLink]"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}"
+      >
+        <i class="navbar-link-icon" [class]="data.icon"></i>
+       
+      </a>
+    </li>
+    <button class="btn-close-sesion" (click)="logout()"> Salir </button>
+  </ul>
+</div>

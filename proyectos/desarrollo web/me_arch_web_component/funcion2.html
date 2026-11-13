@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Juego número aleatorio</title>
+        <link rel="stylesheet" href="stylesheet.css" />
+    </head>
+    <body>
+        <me-arch>
+            <menu href="https://www.youtube.com/@UniversidadRafaelUrdanetaURU" text="YouTube"></menu>
+            <menu href="https://twitter.com/notiuru?lang=es" text="Twitter"></menu>
+            <menu href="prueba/index.html" text="Volver"></menu>
+        </me-arch>
+        <script>
+            function resp (){ 
+                numero = Math.ceil(Math.random()*10);
+                    var respuesta = document.getElementById("respuesta").value;
+                    var sal =  document.getElementById("salida");
+                    if (respuesta == numero) {
+                    sal.innerHTML = "Has acertado.";
+                    }
+                    else {
+                     sal.innerHTML = "Lo siento, el número era " + numero;
+                    }
+                }
+        </script>
+        <center><h1>Adivina el número.</h1>
+        <p>El número se encuentra entre 1 y 10.</p>
+        Tu respuesta: <input type="text" id="respuesta">
+        <button onclick = "resp()">Adivinar</button>
+        <p id="salida"></p> </center>
+        <script src="prueba/menu-hamburguesa.js">
+        </script>
+    </body>
+</html>

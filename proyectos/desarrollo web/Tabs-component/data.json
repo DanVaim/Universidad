@@ -1,0 +1,14 @@
+[
+    { "titulo": "'Windows'",
+      "contenido": "document.createElement('h1').a = ' Contenido Tab 1'",
+      "dataId": 1
+    },
+    { "tituloTab": "'MacOS'",
+      "contenido": "document.createElement('h1').v = 'Contenido Tab 2'",
+     "dataId": 2
+    },
+    { "tituloTab": "'Linux'",
+      "contenido": "document.createElement('h1').b = 'Contenido Tab 3'",
+      "dataId": 3
+    }
+  ]

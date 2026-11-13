@@ -1,0 +1,17 @@
+.body {
+    width: 90%;
+    z-index: 0;
+    position: relative;
+    top: 0;
+    transition: all .5s ease;
+    background-color: azure;
+    padding: 3rem;
+}
+.grafica {
+    display: flex;
+    width: 26%;
+    margin-left:46%; 
+    flex-direction: column;
+    justify-content: center;
+    z-index: -1;
+}
